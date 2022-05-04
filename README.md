@@ -29,9 +29,10 @@ jupyter labextension develop rsjupyterlab --overwrite
 jlpm run build
 ```
 
-### Running Jupyterlab 
+### Running Jupyterlab
 
-After linking and building your extension, to run jupyterlab:
+
+* Option A: After linking and building your extension, to run jupyterlab:
 ```bash
 jupyter lab --ip='*'
 ```
@@ -42,9 +43,22 @@ Jupyter Server 1.17.0 is running at:
 ```
 Copy that token and navigate to ```v.radia.run:<port no.>/lab?token=<token>```
 
+* Option B: running sirepo/jupyter
+Run a sirepo jupyter server from sirepo repo directory
+```bash
+cd ~/src/radiasoft/sirepo
+```
+```bash
+bash etc/run-jupyterhub.sh
+```
+This option lets you access jupyterlab through sirepo and gives access to
+authstate etc.
+
+
+
 ### Troubleshooting and more
 
-You may need to disable an extension 
+You may need to disable an extension
 ```bash
 jupyter labextension disable <extension_name>
 ```
