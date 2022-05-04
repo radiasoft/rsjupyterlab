@@ -2,17 +2,11 @@
 
 ![Github Actions Status](https://github.com/github_username/rsjupyterlab/workflows/Build/badge.svg)
 
-A JupyterLab extension.
+Jupyterlab extension repository for sirepo/jupyter
 
 ## Requirements
 
 * JupyterLab >= 3.0
-
-## Install
-
-```bash
-pip install rsjupyterlab
-```
 
 ## Contributing
 
@@ -27,12 +21,32 @@ The `jlpm` command is JupyterLab's pinned version of
 ```bash
 # Clone the repo to your local environment
 # Change directory to the rsjupyterlab directory
-# Install package in development mode
+# Install package in development mode. Needed for develop command below
 pip install -e .
 # Link your development version of the extension with JupyterLab
-jupyter labextension develop . --overwrite
+jupyter labextension develop rsjupyterlab --overwrite
 # Rebuild extension Typescript source after making changes
 jlpm run build
+```
+
+### Running Jupyterlab 
+
+After linking and building your extension, to run jupyterlab:
+```bash
+jupyter lab --ip='*'
+```
+In your terminal you'll see:
+```
+Jupyter Server 1.17.0 is running at:
+  http://localhost:<port no.>/lab?token=<token>
+```
+Copy that token and navigate to ```v.radia.run:<port no.>/lab?token=<token>```
+
+### Troubleshooting and more
+
+You may need to disable an extension 
+```bash
+jupyter labextension disable <extension_name>
 ```
 
 You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
