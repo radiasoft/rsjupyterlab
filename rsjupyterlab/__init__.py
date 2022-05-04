@@ -1,14 +1,16 @@
-# -*- coding: utf-8 -*-
-u""":mod:`rsjupyterlab` package
 
-:copyright: Copyright (c) 2022 RadiaSoft LLC.  All Rights Reserved.
-:license: http://www.apache.org/licenses/LICENSE-2.0.html
-"""
-from __future__ import absolute_import, division, print_function
-import pkg_resources
+import json
+from pathlib import Path
 
-try:
-    # We only have a version once the package is installed.
-    __version__ = pkg_resources.get_distribution('rsjupyterlab').version
-except pkg_resources.DistributionNotFound:
-    pass
+from ._version import __version__
+
+HERE = Path(__file__).parent.resolve()
+
+with (HERE / "labextension" / "package.json").open() as fid:
+    data = json.load(fid)
+
+def _jupyter_labextension_paths():
+    return [{
+        "src": "labextension",
+        "dest": data["name"]
+    }]
