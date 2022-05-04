@@ -1,6 +1,6 @@
-# test_extension
+# rsjupyterlab
 
-![Github Actions Status](https://github.com/github_username/test_extension/workflows/Build/badge.svg)
+![Github Actions Status](https://github.com/github_username/rsjupyterlab/workflows/Build/badge.svg)
 
 A JupyterLab extension.
 
@@ -11,7 +11,7 @@ A JupyterLab extension.
 ## Install
 
 ```bash
-pip install test_extension
+pip install rsjupyterlab
 ```
 
 ## Contributing
@@ -26,7 +26,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Change directory to the test_extension directory
+# Change directory to the rsjupyterlab directory
 # Install package in development mode
 pip install -e .
 # Link your development version of the extension with JupyterLab
@@ -55,5 +55,5 @@ jupyter lab build --minimize=False
 ### Uninstall
 
 ```bash
-pip uninstall test_extension
+pip uninstall rsjupyterlab
 ```
