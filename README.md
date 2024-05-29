@@ -1,7 +1,5 @@
 # rsjupyterlab
 
-![Github Actions Status](https://github.com/github_username/rsjupyterlab/workflows/Build/badge.svg)
-
 Jupyterlab extension repository for sirepo/jupyter
 
 ## Requirements
@@ -49,7 +47,7 @@ Run a sirepo jupyter server from sirepo repo directory
 cd ~/src/radiasoft/sirepo
 ```
 ```bash
-bash etc/run-jupyterhub.sh
+bash etc/run.sh jupyterhub
 ```
 This option lets you access jupyterlab through sirepo and gives access to
 authstate etc.
