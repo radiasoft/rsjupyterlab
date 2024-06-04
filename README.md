@@ -1,7 +1,5 @@
 # rsjupyterlab
 
-![Github Actions Status](https://github.com/github_username/rsjupyterlab/workflows/Build/badge.svg)
-
 Jupyterlab extension repository for sirepo/jupyter
 
 ## Requirements
